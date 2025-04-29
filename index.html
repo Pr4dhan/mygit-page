@@ -8,6 +8,28 @@
 </head>
 <body>
   <div>
+    <svg width="320" height="200" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Crane base -->
+      <rect x="30" y="160" width="40" height="20" fill="#888" />
+      <!-- Crane tower -->
+      <rect x="45" y="60" width="10" height="100" fill="#ccc" />
+      <!-- Crane arm -->
+      <rect x="50" y="60" width="120" height="8" fill="#ccc" />
+      <!-- Cable -->
+      <rect id="cable" x="160" y="68" width="2" height="60" fill="#333">
+        <animate attributeName="height" values="60;90;60" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="68;68;68" dur="2s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Load (box) -->
+      <rect id="load" x="150" y="128" width="20" height="20" fill="#f9c74f">
+        <animate attributeName="y" values="128;158;128" dur="2s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Ground -->
+      <rect x="0" y="180" width="320" height="20" fill="#bdbdbd" />
+      <!-- Text -->
+      <text x="80" y="195" font-size="18" fill="#444" font-family="Verdana">under construction</text>
+    </svg>
+    
     <h1>
       The Page is under progress<span class="dots"></span>
     </h1>
@@ -20,8 +42,9 @@
   </div>
 </body>
 <style>
+  
   div {
-   position: absolute;
+    position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -35,18 +58,19 @@
   }
 
   .dots::after {
-      content: '';
-      display: inline-block;
-      text-align: left;
-      width: 1em;
-      animation: dots 4s steps(4, end) infinite;
-    }
+    content: '';
+    display: inline-block;
+    text-align: left;
+    width: 1em;
+    animation: dots 4s steps(4, end) infinite;
+  }
 
-    @keyframes dots {
-      0%   { content: ''; }
-      33%  { content: '.'; }
-      66%  { content: '..'; }
-      100% { content: '...'; }
-    }
+  @keyframes dots {
+    0%   { content: ''; }
+    33%  { content: '.'; }
+    66%  { content: '..'; }
+    100% { content: '...'; }
+  }
+
 </style>
 </html>
